@@ -1,6 +1,6 @@
-function realCepstrum = getRealCepstrum(speechSegment)
+function [realCepstrum, fs] = getRealCepstrum(speechSegment)
 
-windowedSignal = getWindowedSignal(speechSegment);
+[windowedSignal, fs] = getWindowedSignal(speechSegment);
 logMagnitudeSpectrum = getLogMagnitudeSpectrum(windowedSignal);
 realCepstrum = ifft(logMagnitudeSpectrum);
 

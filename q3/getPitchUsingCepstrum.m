@@ -1,17 +1,16 @@
 function pitch = getPitchUsingCepstrum(speechSegment)
 
-[~, samplingFrequency] = wavread(speechSegment);
-speechCepstrum = getRealCepstrum(speechSegment);
-highTimeCepstrum = getHighTimeCepstrum(speechCepstrum);
+[speechCepstrum, samplingFrequency] = getRealCepstrum(speechSegment);
+highTimeCepstrum = getHighTimeCepstrum(speechCepstrum, samplingFrequency);
 pitch = getPitch(highTimeCepstrum, samplingFrequency);
 
 end
 
 %% get high-time window of speech segment
 
-function highTimeCepstrum = getHighTimeCepstrum(speechCepstrum)
+function highTimeCepstrum = getHighTimeCepstrum(speechCepstrum, Fs)
 
-cutoffLength = 20;
+cutoffLength = Fs * .003;
 
 speechCepstrum = speechCepstrum(1:round(length(speechCepstrum)/2));
 highTimeCepstrum = speechCepstrum;
