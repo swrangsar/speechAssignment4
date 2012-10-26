@@ -1,0 +1,39 @@
+close all; clear all;
+
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/dataFiles/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q1/
+
+%% plot real cepstrum of /a/ in 'pani'
+
+rc1 = getRealCepstrum('a_pani.wav');
+figure(100); clf;
+plot(rc1); axis tight;
+title('Real cepstrum of /a/ in ''pani''');
+ylabel('Magnitude');
+
+%% plot real cepstrum of /n/ in 'pani'
+
+rc2 = getRealCepstrum('a_pani.wav');
+plot(rc1); axis tight;
+title('Real cepstrum of /a/ in ''pani''');
+ylabel('Magnitude');
+
+%% plot real cepstrum of /I/ in 'pani'
+
+rc1 = getRealCepstrum('i_pani.wav');
+plot(rc1); axis tight;
+title('Real cepstrum of /I/ in ''pani''');
+ylabel('Magnitude');
+
+%% plot real cepstrum of /s/ in 'uska'
+
+rc4 = getRealCepstrum('s_uska.wav');
+plot(rc4); axis tight;
+title('Real cepstrum of /s/ in ''uska''');
+ylabel('Magnitude');
+
+
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q1/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/dataFiles/
