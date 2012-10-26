@@ -1,6 +1,7 @@
-function [LPCSpectrum, narrowbandSpectrum, w] = getLPCSpectrum(speechSegment)
+function [LPCSpectrum, narrowbandSpectrum, w] = getLPCSpectrum(speechSegment, poleOrder)
 
-poleOrder = 10;
+if nargin < 2, poleOrder = 10; end
+
 [windowedSignal, fs] = getWindowedSignal(speechSegment);
 M = length(windowedSignal);
 % the narrowband spectrum first

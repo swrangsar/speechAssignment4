@@ -1,0 +1,20 @@
+close all; clear all;
+
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/dataFiles/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q1/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q2/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q3/
+
+%% plot real cepstrum of /a/ in 'pani'
+
+rc1 = getRealCepstrum('a_pani_synth.wav');
+figure(100); clf;
+plot(rc1); axis tight;
+title('Real cepstrum of synthesized /a/');
+ylabel('c(n)');
+
+
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q3/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q2/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q1/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/dataFiles/

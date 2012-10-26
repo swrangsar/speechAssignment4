@@ -1,4 +1,4 @@
-function pitch = getPitchUsingCepstrum(speechSegment)
+function [pitch, highTimeCepstrum] = getPitchUsingCepstrum(speechSegment)
 
 [speechCepstrum, samplingFrequency] = getRealCepstrum(speechSegment);
 highTimeCepstrum = getHighTimeCepstrum(speechCepstrum, samplingFrequency);
