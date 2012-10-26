@@ -1,8 +1,13 @@
-function vocalTractResponse = getVocalTractResponse(speechSegment)
+function [vocalTractResponse, w] = getVocalTractResponse(speechSegment)
 
 [speechCepstrum, fs] = getRealCepstrum(speechSegment);
 lowTimeCepstrum = getLowTimeCepstrum(speechCepstrum, fs);
 vocalTractResponse = abs(fft(lowTimeCepstrum));
+vocalTractResponse = vocalTractResponse(1:(length(vocalTractResponse)/2));
+
+M = length(vocalTractResponse);
+frequencies = (fs/M) * (0:M-1);
+w = frequencies(:)/2;
 
 end
 
