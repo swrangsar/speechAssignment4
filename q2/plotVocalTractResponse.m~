@@ -1,0 +1,53 @@
+close all; clear all;
+
+
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/dataFiles/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q1/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q2/
+
+%% plot vocal tract response of /a/ in 'pani'
+
+vtr1 = getVocalTractResponse('a_pani.wav');
+w = 2 * pi * ((0:length(vtr1)-1)./length(vtr1));
+figure(100); clf;
+plot(w, vtr1); axis tight;
+title('Vocal Tract Response of /a/ in ''pani''');
+xlabel('Frequency (rad/s)');
+ylabel('Magnitude (dB)');
+
+%% plot vocal tract response of /n/ in 'pani'
+
+vtr2 = getVocalTractResponse('n_pani.wav');
+w = 2 * pi * ((0:length(vtr1)-1)./length(vtr1));
+figure(100); clf;
+plot(w, vtr2); axis tight;
+title('Vocal Tract Response of /a/ in ''pani''');
+xlabel('Frequency (rad/s)');
+ylabel('Magnitude (dB)');
+
+%% plot vocal tract response of /a/ in 'pani'
+
+vtr1 = getVocalTractResponse('a_pani.wav');
+w = 2 * pi * ((0:length(vtr1)-1)./length(vtr1));
+figure(100); clf;
+plot(w, vtr1); axis tight;
+title('Vocal Tract Response of /a/ in ''pani''');
+xlabel('Frequency (rad/s)');
+ylabel('Magnitude (dB)');
+
+%% plot vocal tract response of /a/ in 'pani'
+
+vtr1 = getVocalTractResponse('a_pani.wav');
+w = 2 * pi * ((0:length(vtr1)-1)./length(vtr1));
+figure(100); clf;
+plot(w, vtr1); axis tight;
+title('Vocal Tract Response of /a/ in ''pani''');
+xlabel('Frequency (rad/s)');
+ylabel('Magnitude (dB)');
+
+
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q2/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q1/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/
+rmpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/dataFiles/
