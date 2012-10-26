@@ -35,7 +35,11 @@ ylabel('Magnitude (logarithmic)');
 
 %% get the pitch of /s/ in 'uska' at 16khz
 
-pitchOfSat16k = getPitchUsingCepstrum('s_uska_16k.wav')
+[pitchS16, htl1] = getPitchUsingCepstrum('s_uska_16k.wav');
+pitchS16
+figure(300); clf;
+plot(htl1); axis tight;
+title('High-time liftered cepstrum of /s/ in ''uska'' at 16kHz');
 
 
 

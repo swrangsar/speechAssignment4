@@ -35,7 +35,11 @@ ylabel('Magnitude (logarithmic)');
 
 %% get the pitch of synthesized /a/
 
-pitchOfSynthesizedA = getPitchUsingCepstrum('a_pani_synth.wav')
+[pitchOfSynthesizedA, htl1] = getPitchUsingCepstrum('a_pani_synth.wav');
+pitchOfSynthesizedA
+figure(300); clf;
+plot(htl1); axis tight;
+title('High-time liftered cepstrum of synthesized /a/');
 
 
 
