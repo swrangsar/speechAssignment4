@@ -1,0 +1,7 @@
+close all; clear all;
+
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/dataFiles/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q1/
+addpath /Users/swrangsarbasumatary/Desktop/speechAssignment4/q3/
+
+rmpath /Users/sw
